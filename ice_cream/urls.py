@@ -19,9 +19,9 @@ from rest_framework.routers import DefaultRouter
 from trucks import views
 
 router = DefaultRouter()
-router.register(r"trucks", views.TruckViewSet, basename="truck")
+router.register(r"trucks", views.TruckViewSet, basename="trucks")
 router.register(r"stock", views.StockViewSet, basename="stock")
-router.register(r"purchases", views.PurchaseViewSet, basename="purchase")
+router.register(r"purchases", views.PurchaseViewSet, basename="purchases")
 
 urlpatterns = [
     path("", include(router.urls)),

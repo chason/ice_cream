@@ -1,0 +1,85 @@
+[
+  {
+    "model": "trucks.fooditem",
+    "pk": 1,
+    "fields": {
+      "category": "Ice Cream",
+      "flavor": "Chocolate",
+      "price": "1.50",
+      "name": "DeepChoco"
+    }
+  },
+  {
+    "model": "trucks.fooditem",
+    "pk": 2,
+    "fields": {
+      "category": "Ice Cream",
+      "flavor": "Strawberry",
+      "price": "1.50",
+      "name": "Berry Strawberry"
+    }
+  },
+  {
+    "model": "trucks.fooditem",
+    "pk": 3,
+    "fields": {
+      "category": "Snack Bar",
+      "flavor": "Chocolate",
+      "price": "3.00",
+      "name": "Crunchy Chocoba"
+    }
+  },
+  {
+    "model": "trucks.fooditem",
+    "pk": 4,
+    "fields": {
+      "category": "Snocone",
+      "flavor": "Rainbow",
+      "price": "1.25",
+      "name": "Eat the Rainbow!"
+    }
+  },
+  {
+    "model": "trucks.truck",
+    "pk": 1,
+    "fields": {
+      "name": "Our Awesome Truck"
+    }
+  },
+  {
+    "model": "trucks.stock",
+    "pk": 1,
+    "fields": {
+      "truck": 1,
+      "food_item": 1,
+      "quantity": 10
+    }
+  },
+  {
+    "model": "trucks.stock",
+    "pk": 2,
+    "fields": {
+      "truck": 1,
+      "food_item": 2,
+      "quantity": 10
+    }
+  },
+  {
+    "model": "trucks.stock",
+    "pk": 3,
+    "fields": {
+      "truck": 1,
+      "food_item": 3,
+      "quantity": 15
+    }
+  },
+  {
+    "model": "trucks.stock",
+    "pk": 4,
+    "fields": {
+      "truck": 1,
+      "food_item": 4,
+      "quantity": 5
+    }
+  }
+]
