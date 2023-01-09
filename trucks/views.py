@@ -1,6 +1,8 @@
 from collections import Counter
+from decimal import Decimal
 
 from django.db.models import Sum
+from django.db.models.functions import Coalesce
 from rest_framework import viewsets, permissions, status
 from rest_framework.response import Response
 
@@ -15,7 +17,9 @@ class TruckViewSet(viewsets.ModelViewSet):
     Annotates the queryset with `total_money` as specified in the Serializer
     """
 
-    queryset = Truck.objects.annotate(total_money=Sum("purchases__price")).all()
+    queryset = Truck.objects.annotate(
+        total_money=Coalesce(Sum("purchases__price"), Decimal(0))
+    ).all()
     serializer_class = TruckSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 

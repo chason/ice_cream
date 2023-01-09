@@ -37,7 +37,7 @@ class Stock(models.Model):
 
     truck = models.ForeignKey(Truck, on_delete=models.CASCADE, related_name="stock")
     food_item = models.ForeignKey(FoodItem, on_delete=models.CASCADE)
-    quantity = models.IntegerField(default=0)
+    quantity = models.PositiveIntegerField(default=0)
 
 
 class Purchase(models.Model):
